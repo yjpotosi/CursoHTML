@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="anination" width="200" style="border: 1px solid;">
+
+    </canvas>
+    <script>
+
+        var canva = document.getElementById("anination");
+        var ctx = canva.getContext("2d");
+        var posx = 0;
+        var posy = 0;
+
+        animar();
+
+        function dibujarcuadro(x, y) {
+            ctx.fillStyle = "#ff000"
+            ctx.fillRect(x, y, 30, 30);
+        }
+
+        function animar() {
+            ctx.clearRect(0,0, canva.width, canva.height);
+            dibujarcuadro(posx, posy);
+            
+            requestAnimationFrame(animar);
+            if (posx < canva.width-30 ){
+                posx++;
+       
+            }
+            if (posy < canva.height -30){
+                posy++;
+       
+            }
+
+        }
+    </script>
+
+</body>
+</html>

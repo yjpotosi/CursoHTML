@@ -1,0 +1,17 @@
+<script>
+    var h=0;
+    var m=0;
+    var s=0;
+  h= parseFloat(prompt("ingrese las horas"));
+  m= parseFloat(prompt("ingrese a minutos"));
+  s= parseFloat(prompt("ingrese a segundos"));
+  var convercion_horas;
+  convercion_horas= h + m/60 + s/3600;
+  document.write("El tiempo en horas es ", convercion_horas +"<BR>");
+  var convercion_minutos;
+   convercion_minutos= m + s/60 + h*60;
+   document.write("El tiempo en minutos es ", convercion_minutos +"<BR>");
+   var convercion_segundos;
+   convercion_segundos= s + m*60 + h*3600
+   document.write("El tiempo en segundos es ", convercion_segundos + "<BR>");
+</script>
